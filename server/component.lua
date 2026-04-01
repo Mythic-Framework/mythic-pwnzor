@@ -23,6 +23,7 @@ function RetrieveComponents()
 	Pwnzor = exports["mythic-base"]:FetchComponent("Pwnzor")
 	Fetch = exports["mythic-base"]:FetchComponent("Fetch")
 	Chat = exports["mythic-base"]:FetchComponent("Chat")
+	Version = exports["mythic-base"]:FetchComponent("Version")
 end
 
 local _loaded = false
@@ -35,6 +36,7 @@ AddEventHandler("Core:Shared:Ready", function()
 		"Pwnzor",
 		"Fetch",
 		"Chat",
+		"Version",
 	}, function(error)
 		if #error > 0 then
 			return
@@ -57,6 +59,8 @@ AddEventHandler("Core:Shared:Ready", function()
 				end
 			end)
 		end
+
+		Version:Check('Mythic-Framework/Mythic-VersionCheckers', GetCurrentResourceName())
 	end)
 end)
 
