@@ -1,9 +1,3 @@
---[[
-    This registers fake events which we do not have at all, but a lot of retarded
-    menus will try to trigger them. Might as well kill the braindead fish in the barrel
-]]
---
-
 local _blacklistedEvents = {
 	"8321hiue89js",
 	"adminmenu:allowall",
